@@ -199,7 +199,7 @@ class ContactControllerContact extends JControllerForm
 			$body   = $prefix . "\n" . $name . ' <' . $email . '>' . "\r\n\r\n" . stripslashes($body);
 
 			// Load the custom fields
-			if ($data['params'] && $fields = FieldsHelper::getFields('com_contact.mail', $contact, $false, $data['params']))
+			if ($data['params'] && $fields = FieldsHelper::getFields('com_contact.mail', $contact, true, $data['params']))
 			{
 				$output = FieldsHelper::render(
 							'com_contact.mail',
